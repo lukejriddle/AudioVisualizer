@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane" maxWidth="-1.0" prefHeight="815.0" prefWidth="1241.0" styleClass="container" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller">
+  <bottom>
+    <HBox fx:id="audioUrlText" alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="1107.0" spacing="20.0">
+      <children>
+        <Button fx:id="playBtn" focusTraversable="false" mnemonicParsing="false" onAction="#buttonHandle" prefHeight="65.0" prefWidth="110.0" text="PLAY" />
+        <Button fx:id="browseBtn" focusTraversable="false" mnemonicParsing="false" onAction="#browseFiles" prefHeight="40.0" prefWidth="40.0" text=".  .  ." />
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+          <children>
+            <Text fx:id="fileText" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white" text="" />
+          </children>
+        </HBox>
+      </children>
+    </HBox>
+  </bottom>
+  <center>
+    <BarChart fx:id="barChart" animated="false" barGap="0.0" categoryGap="0.0" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" legendVisible="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="537.0" prefWidth="871.0" styleClass="chart" titleSide="BOTTOM" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+      <xAxis>
+        <CategoryAxis fx:id="xAxis" side="BOTTOM" />
+      </xAxis>
+      <yAxis>
+        <NumberAxis fx:id="yAxis" side="LEFT" />
+      </yAxis>
+      <padding>
+        <Insets left="5.0" right="5.0" top="5.0" />
+      </padding>
+    </BarChart>
+  </center>
+  <padding>
+    <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+  </padding>
+  <stylesheets>
+    <URL value="@style.css" />
+  </stylesheets>
+  <top>
+    <GridPane alignment="CENTER" prefHeight="77.0" prefWidth="1179.0" BorderPane.alignment="CENTER">
+      <children>
+        <Label fx:id="clLabel" contentDisplay="LEFT" labelFor="$clPicker" onMouseClicked="#showClPicker" prefHeight="60.0" prefWidth="144.0" text="COLOR" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <graphic>
+            <ColorPicker fx:id="clPicker" focusTraversable="false" minWidth="-1.0" onAction="#changeColor" prefHeight="37.0" prefWidth="28.0" style="" />
+          </graphic>
+        </Label>
+        <Button onAction="#styleChoiceHandle" fx:id="styleChoice" prefHeight="60.0" prefWidth="144.0" GridPane.columnIndex="2" GridPane.rowIndex="0" text="Literal" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="500.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="347.0" minWidth="10.0" prefWidth="148.0" />
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="500.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </top>
+</BorderPane>
