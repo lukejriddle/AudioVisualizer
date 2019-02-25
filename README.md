@@ -8,3 +8,6 @@ Features two styles of visualizer:
 
 User may also select any color from a ColorPicker.
 
+---
+Creating using IntelliJ IDEA Community.
+
