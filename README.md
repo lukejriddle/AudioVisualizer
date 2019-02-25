@@ -9,5 +9,10 @@ Features two styles of visualizer:
 User may also select any color from a ColorPicker.
 
 ---
+![img1](https://github.com/lukejriddle/AudioVisualizer/raw/master/img/interface2.PNG)
+
+![img2](https://github.com/lukejriddle/AudioVisualizer/raw/master/img/interface3.PNG)
+
+
 Creating using IntelliJ IDEA Community.
 
